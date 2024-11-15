@@ -17,7 +17,8 @@
       margin: 0;
       background: linear-gradient(to right, #1E90FF, #00BFFF);
       overflow-x: hidden;
-    } .gradient-bg {
+    }
+.gradient-bg {
   background: linear-gradient(to right, #1E90FF, #00BFFF);
 }
 
@@ -136,7 +137,7 @@
   nav ul li a:hover {
     color: #ccc;
   }
-}</style>
+} </style>
 </head>
 <body>
   <header class="bg-gray-900 text-white py-6 shadow-xl animate__animated animate__fadeInDown">
@@ -160,9 +161,17 @@
   </header>
   <section class="gradient-bg py-20 animate__animated animate__fadeInUp" style="height: calc(100vh - 72px);">
     <div class="container mx-auto text-center text-white px-4 sm:px-0 h-full flex flex-col justify-center items-center">
-      <h1 class="text-4xl font-bold mb-6 animate__animated animate__fadeInDown">NetPERSONA: Revolutionize Your Hospitality Guest Experience</h1>
-      <p class="text-xl mb-10 animate__animated animate__fadeInUp">NetPERSONA is a state-of-the-art SaaS solution designed to empower hospitality businesses in delivering unparalleled guest experiences.</p>
-      <button class="btn-primary animate__animated animate__pulse animate__infinite pulse-animation" onclick="openModal('contactModal')">Get Started</button>
+      <h1 class="text-4xl font-bold mb-6 animate__animated animate__fadeInDown">NetPERSONA</h1>
+      <p class="text-xl mb-10 animate__animated animate__fadeInUp">Revolutionize Your Hospitality Guest Experience</p>
+      <button class="btn-primary animate__animated animate__pulse animate__infinite pulse-animation" onclick="openModal('contactModal')">
+        Get Started
+        <div class="animate__animated animate__fadeInUp">
+          <i class="fas fa-user-cog icon"></i>Intelligent Guest Segmentation
+          <i class="fas fa-user-circle icon"></i>Detailed Guest Profiles
+          <i class="fas fa-chart-line icon"></i>Actionable Business Intelligence
+          <i class="fas fa-lock icon"></i>Compliance and Reporting
+        </div>
+      </button>
     </div>
   </section>
   <div id="featuresModal" class="modal animate__animated animate__bounceIn">
