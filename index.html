@@ -13,19 +13,26 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-    }
-.gradient-bg {
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #1E90FF, #00BFFF);
+      overflow: hidden;
+    } .gradient-bg {
   background: linear-gradient(to right, #1E90FF, #00BFFF);
 }
+
 .shadow-xl {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
+
 .pulse-animation {
   animation: pulse 2s infinite;
 }
+
 .scale-animation {
   animation: scale 1s ease-in-out infinite alternate;
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -37,6 +44,7 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
   background-color: #F8F8F8;
   margin: 15% auto;
@@ -47,6 +55,7 @@
   width: 90%;
   max-width: 600px;
 }
+
 .close {
   color: #888;
   position: absolute;
@@ -55,27 +64,36 @@
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: #333;
   text-decoration: none;
   cursor: pointer;
 }
+
 .btn-primary {
   @apply bg-[#1E90FF] hover:bg-[#00BFFF] text-white font-bold py-3 px-6 rounded-full transition-colors duration-300;
 }
+
 .btn-secondary {
   @apply bg-white hover:bg-gray-200 text-[#1E90FF] font-bold py-3 px-6 rounded-full transition-colors duration-300 border border-[#1E90FF];
 }
+
 .icon {
-  @apply text-[#1E90FF] mr-2;
+  @apply text-[#1E90FF] mr-2 animate__animated animate__zoomIn;
 }
-  </style>
+
+.header-icon {
+  @apply text-white mr-2 animate__animated animate__zoomIn;
+}</style>
 </head>
 <body>
   <header class="bg-gray-900 text-white py-6 shadow-xl animate__animated animate__fadeInDown">
     <div class="container mx-auto flex justify-between items-center px-4 sm:px-0">
-      <a href="#" class="text-2xl font-bold animate__animated animate__fadeInLeft">NetPERSONA</a>
+      <a href="#" class="text-2xl font-bold animate__animated animate__fadeInLeft">
+        <i class="fas fa-home header-icon"></i>NetPERSONA
+      </a>
       <nav>
         <ul class="flex space-x-6 animate__animated animate__fadeInRight">
           <li><a href="#" class="hover:text-gray-400">Home</a></li>
@@ -85,15 +103,13 @@
       </nav>
     </div>
   </header>
-
-  <section class="gradient-bg py-20 animate__animated animate__fadeInUp">
-    <div class="container mx-auto text-center text-white px-4 sm:px-0">
+  <section class="gradient-bg py-20 animate__animated animate__fadeInUp" style="height: calc(100vh - 72px);">
+    <div class="container mx-auto text-center text-white px-4 sm:px-0 h-full flex flex-col justify-center items-center">
       <h1 class="text-4xl font-bold mb-6 animate__animated animate__fadeInDown">NetPERSONA: Revolutionize Your Hospitality Guest Experience</h1>
       <p class="text-xl mb-10 animate__animated animate__fadeInUp">NetPERSONA is a state-of-the-art SaaS solution designed to empower hospitality businesses in delivering unparalleled guest experiences.</p>
       <button class="btn-primary animate__animated animate__pulse animate__infinite pulse-animation" onclick="openModal('contactModal')">Get Started</button>
     </div>
   </section>
-
   <div id="featuresModal" class="modal animate__animated animate__bounceIn">
     <div class="modal-content">
       <span class="close" onclick="closeModal('featuresModal')">&times;</span>
@@ -122,7 +138,6 @@
       </div>
     </div>
   </div>
-
   <div id="contactModal" class="modal animate__animated animate__bounceIn">
     <div class="modal-content">
       <span class="close" onclick="closeModal('contactModal')">&times;</span>
@@ -133,13 +148,11 @@
       </div>
     </div>
   </div>
-
   <footer class="bg-gray-900 text-white py-10 animate__animated animate__fadeInUp">
     <div class="container mx-auto text-center px-4 sm:px-0">
       <p>&copy; 2024 NetPERSONA. All rights reserved.</p>
     </div>
   </footer>
-
   <script>
     function openModal(modalId) {
       const modal = document.getElementById(modalId);
