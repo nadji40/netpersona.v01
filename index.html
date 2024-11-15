@@ -147,6 +147,31 @@
     color: #ccc;
   }
 }
+    .animate__zoomIn {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Adjust padding and margins */
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+/* Adjust text sizes for better fit */
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
     </style>
 </head>
 <body>
@@ -163,34 +188,27 @@
       </div>
     </div>
   </header>
-    <section class="gradient-bg py-20 animate__animated animate__fadeInUp" style="height: calc(100vh - 72px);">
+   <!-- Remove the duplicate section and combine into one main section -->
+<section class="gradient-bg py-10 animate__animated animate__fadeInUp" style="height: calc(100vh - 72px);">
     <div class="container mx-auto text-center text-white px-4 sm:px-0 h-full flex flex-col justify-center items-center">
-       
-    
-        <!-- Added Image Placeholder -->
-        <div class="mb-10 animate__animated animate__fadeIn">
+        <!-- Adjust image size and add animation -->
+        <div class="mb-6 animate__animated animate__zoomIn">
             <img src="cc.jpg" 
                  alt="NetPERSONA Software Interface" 
-                 class="rounded-lg shadow-2xl max-w-3xl mx-auto"
-                 style="max-height: 400px; width: auto;"
+                 class="rounded-lg shadow-2xl mx-auto"
+                 style="max-height: 35vh; width: auto;"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23cccccc\'/%3E%3Ctext x=\'300\' y=\'200\' font-family=\'Arial\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23666666\'%3ENetPERSONA Interface Image%3C/text%3E%3C/svg%3E'">
         </div>
         
-  
-    </div>
-</section>
-  <section class="gradient-bg py-20 animate__animated animate__fadeInUp" style="height: calc(100vh - 72px);">
-    <div class="container mx-auto text-center text-white px-4 sm:px-0 h-full flex flex-col justify-center items-center">
-      <h1 class="text-4xl font-bold mb-6 animate__animated animate__fadeInDown">NetPERSONA: Revolutionize Your Hospitality Guest Experience</h1>
-         <p class="text-xl mb-10 animate__animated animate__fadeInUp">NetPERSONA is a state-of-the-art SaaS solution designed to empower hospitality businesses in delivering unparalleled guest experiences.</p>
+        <h1 class="text-3xl font-bold mb-4 animate__animated animate__fadeInDown">NetPERSONA: Revolutionize Your Hospitality Guest Experience</h1>
+        <p class="text-lg mb-6 animate__animated animate__fadeInUp">NetPERSONA is a state-of-the-art SaaS solution designed to empower hospitality businesses in delivering unparalleled guest experiences.</p>
         
-      <div class="raw">
+        <div class="raw">
             <button class="btn-primary animate__animated animate__pulse animate__infinite pulse-animation" onclick="openModal('contactModal')">Get Started</button>
             <button class="btn-primary animate__animated animate__pulse animate__infinite pulse-animation" onclick="openModal('featuresModal')">Features</button>
         </div>   
     </div>
-  </section>
-
+</section>
   <div id="featuresModal" class="modal animate__animated animate__bounceIn">
     <div class="modal-content">
       <span class="close" onclick="closeModal('featuresModal')">&times;</span>
