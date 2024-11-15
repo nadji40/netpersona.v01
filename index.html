@@ -16,8 +16,8 @@
       height: 100vh;
       margin: 0;
       background: linear-gradient(to right, #1E90FF, #00BFFF);
-      overflow: hidden;
-    }.gradient-bg {
+      overflow-x: hidden;
+    } .gradient-bg {
   background: linear-gradient(to right, #1E90FF, #00BFFF);
 }
 
@@ -108,12 +108,13 @@
   nav ul {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 72px;
     left: 0;
     width: 100%;
     background-color: #333;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
   nav ul.show {
@@ -123,6 +124,17 @@
   nav ul li {
     display: block;
     margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    color: #ccc;
   }
 }</style>
 </head>
@@ -147,16 +159,54 @@
     </div>
   </header>
   <section class="gradient-bg py-20 animate__animated animate__fadeInUp" style="height: calc(100vh - 72px);">
-    <!-- Section content goes here -->
+    <div class="container mx-auto text-center text-white px-4 sm:px-0 h-full flex flex-col justify-center items-center">
+      <h1 class="text-4xl font-bold mb-6 animate__animated animate__fadeInDown">NetPERSONA: Revolutionize Your Hospitality Guest Experience</h1>
+      <p class="text-xl mb-10 animate__animated animate__fadeInUp">NetPERSONA is a state-of-the-art SaaS solution designed to empower hospitality businesses in delivering unparalleled guest experiences.</p>
+      <button class="btn-primary animate__animated animate__pulse animate__infinite pulse-animation" onclick="openModal('contactModal')">Get Started</button>
+    </div>
   </section>
   <div id="featuresModal" class="modal animate__animated animate__bounceIn">
-    <!-- Modal content goes here -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('featuresModal')">&times;</span>
+      <h2 class="text-3xl font-bold mb-10 animate__animated animate__fadeInUp">Advanced Netpersona Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="animate__animated animate__fadeInLeft">
+          <i class="fas fa-user-cog icon fa-2x"></i>
+          <h3 class="text-2xl font-bold mb-4">Intelligent Guest Segmentation</h3>
+          <p class="text-lg mb-4">Our cutting-edge guest segmentation capabilities allow you to effortlessly categorize your guests into distinct tiers - VIP, Medium, and Standard.</p>
+        </div>
+        <div class="animate__animated animate__fadeInRight">
+          <i class="fas fa-user-circle icon fa-2x"></i>
+          <h3 class="text-2xl font-bold mb-4">Detailed Guest Profiles</h3>
+          <p class="text-lg mb-4">Gain valuable insights into your guests' nationalities, personal descriptions, and behavioral patterns to deliver personalized experiences.</p>
+        </div>
+        <div class="animate__animated animate__fadeInLeft">
+          <i class="fas fa-chart-line icon fa-2x"></i>
+          <h3 class="text-2xl font-bold mb-4">Actionable Business Intelligence</h3>
+          <p class="text-lg mb-4">Uncover invaluable insights that drive strategic decision-making and operational optimization with Netpersona's robust analytics engine.</p>
+        </div>
+        <div class="animate__animated animate__fadeInRight">
+          <i class="fas fa-lock icon fa-2x"></i>
+          <h3 class="text-2xl font-bold mb-4">Compliance and Reporting</h3>
+          <p class="text-lg mb-4">Safeguard your guests' data with industry-leading encryption and decryption capabilities, and generate comprehensive audit logs.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="contactModal" class="modal animate__animated animate__bounceIn">
-    <!-- Modal content goes here -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2 class="text-3xl font-bold mb-10 animate__animated animate__fadeInUp">Contact Netpersona</h2>
+      <div class="space-y-4 animate__animated animate__fadeInUp">
+        <p class="text-lg"><i class="fas fa-envelope icon"></i> <a href="mailto:kn_khentit@esi.dz" class="text-blue-500 hover:text-blue-600">E-MAIL</a></p>
+        <p class="text-lg"><i class="fab fa-whatsapp icon"></i> <a href="https://wa.me/213559362307" target="_blank" class="text-blue-500 hover:text-blue-600">WhatsApp</a></p>
+      </div>
+    </div>
   </div>
   <footer class="bg-gray-900 text-white py-10 animate__animated animate__fadeInUp">
-    <!-- Footer content goes here -->
+    <div class="container mx-auto text-center px-4 sm:px-0">
+      <p>&copy; 2024 NetPERSONA. All rights reserved.</p>
+    </div>
   </footer>
   <script>
     function openModal(modalId) {
